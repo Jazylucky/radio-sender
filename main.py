@@ -23,13 +23,13 @@ def on_forever2():
         send = "rf"
         basic.show_string("r")
         pass
-
+        
+    def on_received_string(receivedString):
+        basic.show_string(receivedString)
+    radio.on_received_string(on_received_string)
     
-    def on_received_number(receivedNumber):
-        if receivedNumber <= 20:
-            send = "bs"
-            basic.show_string("fs")
-    radio.on_received_number(on_received_number)
+    
+    
 
 
     radio.send_string(send)

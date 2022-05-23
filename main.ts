@@ -32,13 +32,8 @@ basic.forever(function on_forever2() {
         
     }
     
-    radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
-        let send: string;
-        if (receivedNumber <= 20) {
-            send = "bs"
-            basic.showString("fs")
-        }
-        
+    radio.onReceivedString(function on_received_string(receivedString: string) {
+        basic.showString(receivedString)
     })
     radio.sendString(send)
     radio.onReceivedString(function on_received_string(receivedString: string) {
