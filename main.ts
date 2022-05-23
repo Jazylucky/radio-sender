@@ -3,31 +3,31 @@ basic.forever(function on_forever2() {
     let send: string;
     radio.setGroup(1)
     if (input.buttonIsPressed(Button.A)) {
-        send = "f"
+        send = "bf"
         basic.showString("f")
         
     }
     
     if (input.buttonIsPressed(Button.B)) {
-        send = "b"
+        send = "bb"
         basic.showString("b")
         
     }
     
     if (input.pinIsPressed(TouchPin.P1)) {
-        send = "s"
+        send = "bs"
         basic.showString("s")
         
     }
     
     if (input.pinIsPressed(TouchPin.P0)) {
-        send = "l"
+        send = "lf"
         basic.showString("l")
         
     }
     
     if (input.pinIsPressed(TouchPin.P3)) {
-        send = "r"
+        send = "rf"
         basic.showString("r")
         
     }
@@ -35,7 +35,7 @@ basic.forever(function on_forever2() {
     radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
         let send: string;
         if (receivedNumber <= 20) {
-            send = "s"
+            send = "bs"
             basic.showString("fs")
         }
         
