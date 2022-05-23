@@ -1,5 +1,5 @@
 
-send = "s"
+send = "bs"
 def on_forever2():
     radio.set_group(1)
     if input.button_is_pressed(Button.A):

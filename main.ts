@@ -1,4 +1,4 @@
-let send = "s"
+let send = "bs"
 basic.forever(function on_forever2() {
     let send: string;
     radio.setGroup(1)
